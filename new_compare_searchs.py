@@ -57,12 +57,12 @@ def on_draw():
         x = i * (box_size + margin) + margin  # คำนวณตำแหน่ง x พร้อมระยะขอบ
         # Linear search boxes (อยู่ครึ่งบน)
         y_linear = window.height * 3/4 - box_size / 2
-        color_linear = (0, 203, 14) if linear_found and i == linear_index - 1 else (247, 0, 255) if i == linear_index else (98, 108, 99)
+        color_linear = (0, 203, 14) if linear_found and i == linear_index - 1 else (247, 0, 255) if i == linear_index else (200, 200, 200)
         pyglet.shapes.Rectangle(x, y_linear, box_size, box_size, color=color_linear, batch=batch).draw()
 
         # Binary search boxes (อยู่ครึ่งล่าง)
         y_binary = window.height / 4 - box_size / 2
-        color_binary = (0, 203, 14) if binary_found and i == binary_mid else (247, 0, 255) if binary_left <= i <= binary_right else (98, 108, 99)
+        color_binary = (0, 203, 14) if binary_found and i == binary_mid else (247, 0, 255) if binary_left <= i <= binary_right else (200, 200, 200)
         pyglet.shapes.Rectangle(x, y_binary, box_size, box_size, color=color_binary, batch=batch).draw()
 
         # วาดตัวเลขในแต่ละช่องไว้ค้นหาและปรับขนาดตัวอักษรให้อ่านง่ายขึ้น
