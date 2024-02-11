@@ -13,7 +13,7 @@ def reset_searches():
     random.shuffle(numbers)  # สับเปลี่ยนสำหรับ linear search
     numbers.sort()  # เรียงลำดับเพื่อทำการค้นหาแบบ binary search
 
-    # Reset ตัวแปรค้นหา
+   # Reset ตัวแปรค้นหา
     linear_index = 0
     linear_found = False
     binary_left, binary_right = 0, len(numbers) - 1
@@ -52,10 +52,10 @@ pyglet.clock.schedule_interval(update_searches, 0.5)
 def on_draw():
     window.clear()
     margin = 5  # ระยะขอบระหว่างกล่อง
-    box_size = (window.width - margin * (len(numbers) + 1)) // len(numbers)  # สั่งให้คำนวณกล่องตามความกว้างและระยะขอบของหน้าต่าง
+    box_size = (window.width - margin * (len(numbers) + 1)) // len(numbers)   # สั่งให้คำนวณกล่องตามความกว้างและระยะขอบของหน้าต่าง
     for i, number in enumerate(numbers):
         x = i * (box_size + margin) + margin  # คำนวณตำแหน่ง x พร้อมระยะขอบ
-        # Linear search boxes (อยู่ครึ่งบน)
+        # คำนวณตำแหน่ง x พร้อมระยะขอบ
         y_linear = window.height * 3/4 - box_size / 2
         color_linear = (0, 203, 14) if linear_found and i == linear_index - 1 else (247, 0, 255) if i == linear_index else (200, 200, 200)
         pyglet.shapes.Rectangle(x, y_linear, box_size, box_size, color=color_linear, batch=batch).draw()
