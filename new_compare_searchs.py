@@ -10,7 +10,6 @@ def reset_searches():
     global numbers, linear_index, linear_found, binary_left, binary_right, binary_mid, binary_found
     #  สร้างตัวเลขที่มีการสุ่มและเรียงลำดับ รวมถึงจะต้องมีเลข 42 รวมอยู่ด้วยแล้วจัดเรียงเพื่อทำ binary search
     numbers = random.sample(range(1, 100), 31) + [42]
-    random.shuffle(numbers)  # สับเปลี่ยนสำหรับ linear search
     numbers.sort()  # เรียงลำดับเพื่อทำการค้นหาแบบ binary search
 
    # Reset ตัวแปรค้นหา

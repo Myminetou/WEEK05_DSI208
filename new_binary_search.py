@@ -9,7 +9,6 @@ batch = pyglet.graphics.Batch()
 # สร้างตัวเลขที่มีการสุ่มและเรียงลำดับ รวมถึงจะต้องมีเลข 42 รวมอยู่ด้วย
 numbers = random.sample(range(1, 100), 19) + [42]
 numbers.sort()  # Sort the list for binary search
-random.shuffle(numbers)
 
 # ตัวแปรที่ควบคุมการเคลื่อนไหวและการค้นหา
 left, right = 0, len(numbers) - 1
